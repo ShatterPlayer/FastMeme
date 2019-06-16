@@ -1,0 +1,64 @@
+{
+  "name": "fastmeme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm test && webpack --mode=production",
+    "dev": "webpack-dev-server",
+    "test": "jest --verbose",
+    "test/watch-mode": "jest --watchAll --verbose",
+    "eslint/fix": "eslint src/**/*.jsx --fix"
+  },
+  "author": "ShatterPlayer",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@testing-library/react": "^8.0.1",
+    "@types/jest": "^24.0.13",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.4.1",
+    "jest": "^24.8.0",
+    "jest-canvas-mock": "^2.1.0",
+    "prettier": "^1.18.2",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-ga": "^2.5.7",
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.1",
+    "workbox-webpack-plugin": "^4.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint/fix",
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
