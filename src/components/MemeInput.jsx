@@ -14,7 +14,7 @@ const Input = styled.input`
 
 const MemeInput = ({ setImage }) => {
   const setImageValidate = file => {
-    if (file.type === 'image/png' || file.type === 'image/jpeg') {
+    if (file && (file.type === 'image/png' || file.type === 'image/jpeg')) {
       const reader = new FileReader();
 
       const image = new Image();
