@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 
 const Background = styled.div`
   position: absolute;
-  width: 200vw;
+  width: 300vw;
   height: 200vh;
   background-color: #121212;
   transform: rotate(20deg);

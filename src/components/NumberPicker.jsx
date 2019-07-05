@@ -3,23 +3,34 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const styles = {
-  borderRadius: 20,
-  color: '#1D84B5'
+  borderRadius: 20
 };
 
 const Wrapper = styled.div`
-  min-width: 245px;
-  max-width: 165px;
+  width: 220px;
+  height: 60px;
   display: flex;
   text-align: center;
   font-weight: 900;
   border-radius: ${styles.borderRadius}px;
   margin: 20px 0;
   background-color: white;
+  box-shadow: 0 0 5px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 975px) {
+    flex: 1;
+    border-radius: 0px;
+    box-shadow: none;
+    margin: 0;
+    background-color: #1d84b5;
+  }
 `;
 
 const Button = styled.button`
   width: 18%;
+  height: 100%;
   outline: none;
   background-color: white;
   border: none;
@@ -32,14 +43,22 @@ const Button = styled.button`
   font-size: 22px;
 
   &:hover {
-    background-color: ${styles.color};
+    background-color: #1d84b5;
     color: white;
+  }
+
+  @media (max-width: 975px) {
+    display: none;
   }
 `;
 
 const Center = styled.div`
   width: 64%;
-  font-size: 15px;
+  font-size: 13px;
+
+  @media (max-width: 975px) {
+    width: 100%;
+  }
 `;
 
 const Input = styled.input`
@@ -47,6 +66,7 @@ const Input = styled.input`
   width: 100%;
   outline: none;
   border: none;
+  background: none;
 `;
 
 const NumberPicker = ({ setNumber, number, description }) => {

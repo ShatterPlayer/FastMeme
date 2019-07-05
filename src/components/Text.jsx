@@ -2,32 +2,45 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const styles = {
-  width: '220px',
-  height: '120px'
-};
-
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: ${styles.width};
-  height: ${styles.height};
+  width: 220px;
+  height: 120px;
   margin: 40px 0;
+  padding: 0 5px;
+  box-shadow: 0 0 5px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+
+  @media (max-width: 975px) {
+    height: 60px;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    flex: 1;
+    background-color: #1d84b5;
+  }
 `;
 
 const Textarea = styled.textarea`
   position: relative;
-  width: ${styles.width};
-  height: ${styles.height};
+  width: 100%;
+  height: 100%;
   resize: none;
-  border-radius: 15px;
   outline: none;
   border: none;
-  box-shadow: 0 0 5px;
   box-sizing: border-box;
   padding: 10px;
   padding-top: 20px;
+  background: none;
+  overflow: hidden;
+
+  @media (max-width: 975px) {
+    white-space: nowrap;
+  }
 `;
 
 const Description = styled.span`
@@ -37,6 +50,10 @@ const Description = styled.span`
   transition: 0.4s;
   transform: ${props => (props.focus ? 'translateY(-50px)' : '')};
   font-size: ${props => (props.focus ? '0.8em' : '1em')};
+
+  @media (max-width: 975px) {
+    transform: ${props => (props.focus ? 'translateY(-20px)' : '')};
+  }
 `;
 
 function Text({ description, setText, text }) {

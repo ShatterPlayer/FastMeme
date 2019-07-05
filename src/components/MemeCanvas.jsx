@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Canvas = styled.canvas`
-  width: ${props => props.canvasWidth}px;
+  // If width - 100%, if height - calc(100% - 30px)
+  ${({ wORh }) => wORh}: ${({ wORh }) =>
+    wORh === 'height' ? 'calc(100% - 30px)' : '100%'};
   z-index: 3;
 `;
 
@@ -20,7 +22,12 @@ class MemeCanvas extends Component {
     if (this.props !== prevProps && image) {
       // Checks if image was changed
       if (prevProps.image !== image) {
-        const { setFontSize, setVerticalOffset, setLineHeight } = this.props;
+        const {
+          setFontSize,
+          setVerticalOffset,
+          setLineHeight,
+          setWidthOrHeight
+        } = this.props;
 
         // Changes font size, vertical offset and line height basing on image size
         const base = Math.min(image.height, image.width);
@@ -28,6 +35,13 @@ class MemeCanvas extends Component {
         setFontSize(Math.round(base / divider));
         setVerticalOffset(Math.round(base / divider / 2));
         setLineHeight(Math.round(base / divider));
+
+        // Determine what is bigger - width or height
+        if (image.width < image.height) {
+          setWidthOrHeight('height');
+        } else {
+          setWidthOrHeight('width');
+        }
       }
 
       this.refreshImage();
@@ -122,7 +136,7 @@ class MemeCanvas extends Component {
   };
 
   render() {
-    const { image, canvasWidth } = this.props;
+    const { image, canvasWidth, widthOrHeight } = this.props;
     return (
       <Canvas
         ref={r => {
@@ -130,7 +144,7 @@ class MemeCanvas extends Component {
         }}
         width={image ? image.width : canvasWidth}
         height={image ? image.height : canvasWidth}
-        canvasWidth={canvasWidth}
+        wORh={widthOrHeight}
       />
     );
   }
@@ -152,7 +166,10 @@ MemeCanvas.propTypes = {
   setFontSize: PropTypes.func.isRequired,
   setLineHeight: PropTypes.func.isRequired,
 
-  canvasWidth: PropTypes.number.isRequired
+  canvasWidth: PropTypes.number.isRequired,
+
+  widthOrHeight: PropTypes.oneOf(['width', 'height']).isRequired,
+  setWidthOrHeight: PropTypes.func.isRequired
 };
 
 export default MemeCanvas;

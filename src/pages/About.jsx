@@ -25,6 +25,12 @@ const Wrapper = styled.div`
     color: #1D84B5;
     font-weight: bold;
   }
+
+  @media (max-width: 975px) {
+    font-size: 13px;
+    width: 100%;
+    padding: 5px 10px;
+  }
 `;
 
 const About = () => {

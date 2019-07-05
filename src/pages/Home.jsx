@@ -9,9 +9,9 @@ import MemeDownload from '../components/MemeDownload';
 import Text from '../components/Text';
 import NumberPicker from '../components/NumberPicker';
 
-import MemeWrapper from '../components/MemeWrapper';
-import TextFieldsWrapper from '../components/TextFieldsWrapper';
-import NumberPickersWrapper from '../components/NumberPickersWrapper';
+import MemeWrapper from '../wrappers/MemeWrapper';
+import TextFieldsWrapper from '../wrappers/TextFieldsWrapper';
+import NumberPickersWrapper from '../wrappers/NumberPickersWrapper';
 
 const Home = () => {
   ReactGA.pageview('/');
@@ -34,7 +34,9 @@ const Home = () => {
           canvas,
           setCanvas,
           image,
-          setImage
+          setImage,
+          widthOrHeight,
+          setWidthOrHeight
         } = value;
 
         return (
@@ -50,7 +52,11 @@ const Home = () => {
                 content="fastmeme, creator, memes, offline, open, source, memecreator"
               />
             </Helmet>
-            <MemeWrapper canvasWidth={canvasWidth} imageExist={!!image}>
+            <MemeWrapper
+              canvasWidth={canvasWidth}
+              imageExist={!!image}
+              widthOrHeight={widthOrHeight}
+            >
               <MemeCanvas
                 image={image}
                 topText={topText}
@@ -63,12 +69,10 @@ const Home = () => {
                 setLineHeight={setLineHeight}
                 setVerticalOffset={setVerticalOffset}
                 canvasWidth={canvasWidth}
+                widthOrHeight={widthOrHeight}
+                setWidthOrHeight={setWidthOrHeight}
               />
-              <MemeInput
-                setImage={setImage}
-                canvasWidth={canvasWidth}
-                imageHeight={image ? image.height : canvasWidth}
-              />
+              <MemeInput setImage={setImage} />
               <MemeDownload canvas={canvas} imageExist={!!image} />
             </MemeWrapper>
 

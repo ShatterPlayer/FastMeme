@@ -22,6 +22,11 @@ const StyledLink = styled(Link)`
     color: #1d84b5;
     background-color: white;
   }
+
+  @media (max-width: 975px) {
+    top: 10px;
+    right: 10px;
+  }
 `;
 
 const Button = ({ location }) => {

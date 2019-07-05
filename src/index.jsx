@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import { Provider } from './components/AppContext';
 import Logo from './components/Logo';
-import GlobalWrapper from './components/GlobalWrapper';
+import GlobalWrapper from './wrappers/GlobalWrapper';
 import Button from './components/Button';
 import NoMatch from './pages/404';
 
@@ -44,11 +44,14 @@ class App extends Component {
     verticalOffset: 20,
     setVerticalOffset: verticalOffset => this.setState({ verticalOffset }),
 
-    canvasWidth: 500,
+    canvasWidth: window.innerWidth > 975 ? 500 : 300,
     canvas: null,
     setCanvas: canvas => this.setState({ canvas }),
     image: null,
-    setImage: image => this.setState({ image })
+    setImage: image => this.setState({ image }),
+
+    widthOrHeight: 'width',
+    setWidthOrHeight: widthOrHeight => this.setState({ widthOrHeight })
   };
 
   componentDidMount() {

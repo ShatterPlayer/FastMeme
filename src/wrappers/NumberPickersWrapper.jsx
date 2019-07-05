@@ -7,6 +7,13 @@ const NumberPickersWrapper = styled.div`
   align-items: center;
   justify-content: center;
   order: 3;
+
+  @media (max-width: 975px) {
+    position: absolute;
+    bottom: 62px;
+    flex-direction: row;
+    width: 100%;
+  }
 `;
 
 export default NumberPickersWrapper;

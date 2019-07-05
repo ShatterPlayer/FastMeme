@@ -16,12 +16,15 @@ const Wrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-basis: ${props => props.canvasWidth}px;
-  border-radius: 10px;
-  overflow: hidden;
+  ${({ wORh, canvasWidth }) => `${wORh}: ${canvasWidth}px`}
   box-shadow: 0 0 10px;
-  border-bottom: none;
+  border-radius: 10px;
   order: 2;
+  overflow: hidden;
+
+  @media (max-width: 975px) {
+    bottom: 50px;
+  }
 `;
 
 const Background = styled.div`
@@ -31,8 +34,8 @@ const Background = styled.div`
   align-items: center;
   justify-content: center;
   display: flex;
-  height: ${props => props.canvasWidth}px;
-  width: ${props => props.canvasWidth}px;
+  height: 100%;
+  width: 100%;
   background-color: white;
 `;
 
@@ -43,6 +46,10 @@ const Text = styled.span`
   font-weight: bold;
   text-align: center;
   z-index: 2;
+
+  @media (max-width: 975px) {
+    font-size: 24px;
+  }
 `;
 
 const StripesWrapper = styled.div`
@@ -58,7 +65,7 @@ const Stripe = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 300%;
   height: 70px;
   background-color: #1d84b5;
   opacity: 0.1;
@@ -83,15 +90,20 @@ const Stripe = styled.div`
   &:nth-child(6) {
     transform: rotate(45deg) translateY(750px);
   }
+
+  &:nth-child(7) {
+    transform: rotate(45deg) translateY(900px);
+  }
 `;
 
-const MemeWrapper = ({ children, canvasWidth, imageExist }) => (
-  <Wrapper canvasWidth={canvasWidth}>
+const MemeWrapper = ({ children, canvasWidth, imageExist, widthOrHeight }) => (
+  <Wrapper canvasWidth={canvasWidth} wORh={widthOrHeight}>
     {children}
     {!imageExist && (
       <Background canvasWidth={canvasWidth}>
         <Text>Place your image here</Text>
         <StripesWrapper>
+          <Stripe />
           <Stripe />
           <Stripe />
           <Stripe />
@@ -106,7 +118,8 @@ const MemeWrapper = ({ children, canvasWidth, imageExist }) => (
 
 MemeWrapper.propTypes = {
   canvasWidth: PropTypes.number.isRequired,
-  imageExist: PropTypes.bool.isRequired
+  imageExist: PropTypes.bool.isRequired,
+  widthOrHeight: PropTypes.oneOf(['width', 'height']).isRequired
 };
 
 export default MemeWrapper;
