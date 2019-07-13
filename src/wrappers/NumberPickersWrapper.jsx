@@ -13,6 +13,7 @@ const NumberPickersWrapper = styled.div`
     bottom: 62px;
     flex-direction: row;
     width: 100%;
+    z-index: 6;
   }
 `;
 

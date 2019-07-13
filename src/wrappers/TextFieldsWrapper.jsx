@@ -14,6 +14,7 @@ const TextFieldsWrapper = styled.div`
     flex-direction: row;
     width: 100%;
     border-top: 2px solid #0c73a4;
+    z-index: 6;
   }
 `;
 
