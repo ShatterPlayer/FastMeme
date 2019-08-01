@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
+import colors from '../colors';
+
 const StyledLink = styled(Link)`
   position: absolute;
   top: 30px;
@@ -10,16 +12,16 @@ const StyledLink = styled(Link)`
   width: 150px;
   padding: 8px 0;
   color: white;
-  background-color: #1d84b5;
+  background-color: ${colors.second};
   text-align: center;
   font-weight: bold;
   border-radius: 20px;
-  border: 2px solid #1d84b5;
+  border: 2px solid ${colors.second};
   transition: 0.4s;
   outline: none;
 
   &:hover {
-    color: #1d84b5;
+    color: ${colors.second};
     background-color: white;
   }
 
