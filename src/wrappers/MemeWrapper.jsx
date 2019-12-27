@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 
+import colors from '../colors';
+
 const StripesAnimation = keyframes`
   0% {
     top: 0px;
@@ -67,7 +69,7 @@ const Stripe = styled.div`
   left: 0;
   width: 300%;
   height: 70px;
-  background-color: #1d84b5;
+  background-color: ${colors.second};
   opacity: 0.1;
   transform: rotate(45deg);
 

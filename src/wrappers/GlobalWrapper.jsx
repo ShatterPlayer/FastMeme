@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import colors from '../colors';
+
 const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -14,7 +16,7 @@ const Background = styled.div`
   position: absolute;
   width: 300vw;
   height: 200vh;
-  background-color: #121212;
+  background-color: ${colors.first};
   transform: rotate(20deg);
   top: -150vh;
   z-index: -1;

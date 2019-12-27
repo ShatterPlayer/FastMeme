@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import colors from '../colors';
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -21,7 +23,7 @@ const Wrapper = styled.div`
     box-shadow: none;
     border-radius: 0px;
     flex: 1;
-    background-color: #1d84b5;
+    background-color: ${colors.second};
   }
 `;
 

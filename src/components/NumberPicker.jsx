@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import colors from '../colors';
+
 const styles = {
   borderRadius: 20
 };
@@ -24,7 +26,7 @@ const Wrapper = styled.div`
     border-radius: 0px;
     box-shadow: none;
     margin: 0;
-    background-color: #1d84b5;
+    background-color: ${colors.second};
   }
 `;
 
@@ -43,7 +45,7 @@ const Button = styled.button`
   font-size: 22px;
 
   &:hover {
-    background-color: #1d84b5;
+    background-color: ${colors.second};
     color: white;
   }
 
