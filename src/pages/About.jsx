@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import ReactGA from 'react-ga';
 
 const Wrapper = styled.div`
-  width: 70%
+  width: 70%;
   padding: 30px;
   background-color: white;
   border-radius: 20px;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   box-sizing: border-box;
 
   & h2 {
-    color: #1D84B5;
+    color: #1d84b5;
     margin: 0;
     font-size: 20px;
   }
@@ -22,14 +22,14 @@ const Wrapper = styled.div`
   }
 
   & a {
-    color: #1D84B5;
+    color: #1d84b5;
     font-weight: bold;
   }
 
   @media (max-width: 975px) {
     font-size: 13px;
-    width: 100%;
-    padding: 5px 10px;
+    width: 90%;
+    padding: 10px;
   }
 `;
 
