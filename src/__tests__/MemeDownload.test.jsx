@@ -20,7 +20,7 @@ const setup = propOverrides => {
   };
 
   const { getByText } = render(<MemeDownload {...props} />);
-  const downloadButton = getByText('Download');
+  const downloadButton = getByText('Save');
 
   return {
     props,

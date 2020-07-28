@@ -24,7 +24,7 @@ const Button = styled.button`
 `;
 
 const MemeDownload = ({ canvas, imageExist }) => {
-  const downloadMeme = e => {
+  const saveMeme = e => {
     e.stopPropagation();
     if (canvas && imageExist) {
       canvas.toBlob(blob => {
@@ -38,8 +38,8 @@ const MemeDownload = ({ canvas, imageExist }) => {
   };
 
   return (
-    <Button onClick={e => downloadMeme(e)} type="button">
-      Download
+    <Button onClick={e => saveMeme(e)} type="button">
+      Save
     </Button>
   );
 };
