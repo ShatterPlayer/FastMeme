@@ -3,7 +3,7 @@
   "short_name": "FastMeme",
   "start_url": "/",
   "display": "fullscreen",
-  "background_color": "##121212",
+  "background_color": "#121212",
   "theme_color": "#121212",
   "orientation": "portrait-primary",
   "icons": [
