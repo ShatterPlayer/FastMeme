@@ -40,7 +40,9 @@ module.exports = {
 
   plugins: [
     new CleanWebpackPlugin(),
-    new CopyPlugin([{ from: 'src/static', to: '.' }]),
+    new CopyPlugin({
+      patterns: [{ from: 'src/static', to: '.' }]
+    }),
     new workboxPlugin.InjectManifest({
       swDest: 'sw.js',
       swSrc: path.resolve(__dirname, 'src', 'sw.js'),
