@@ -2,7 +2,7 @@
 ![Licence](https://img.shields.io/github/license/ShatterPlayer/FastMeme?style=plastic)
 ![Netlify](https://img.shields.io/netlify/b4d2174e-d444-4758-a6c8-c038d4ca154a)
 ## General info
-FastMeme is a simple React application which is intended to generate classic memes. It uses service workers in order to work without internet connection.
+FastMeme is a simple React application which is intended to generate classic memes. It uses service worker in order to work without internet connection.
 ## Get started
 To install all necessary dependencies run the following command:
 ```bash
