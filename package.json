@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm test && webpack --mode=production",
-    "dev": "webpack-dev-server",
+    "dev": "webpack serve --mode=development",
     "test": "jest --verbose",
     "test/watch-mode": "jest --watchAll --verbose",
     "eslint/fix": "eslint src/**/*.jsx --fix"
@@ -39,9 +39,9 @@
     "jest-canvas-mock": "^2.4.0",
     "prettier": "^1.19.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.3"
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
     "file-saver": "^2.0.5",
