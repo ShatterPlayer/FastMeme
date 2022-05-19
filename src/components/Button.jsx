@@ -45,8 +45,7 @@ Button.propTypes = {
     key: PropTypes.string,
     pathname: PropTypes.string.isRequired,
     search: PropTypes.string.isRequired,
-    hash: PropTypes.string.isRequired,
-    state: PropTypes.object
+    hash: PropTypes.string.isRequired
   }).isRequired
 };
 
