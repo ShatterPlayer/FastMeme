@@ -1,4 +1,4 @@
-# FastMeme - Real-Time Meme Creator
+# FastMeme - Real-Time Meme Generator
 ![Licence](https://img.shields.io/github/license/ShatterPlayer/FastMeme?style=plastic)
 ![Netlify](https://img.shields.io/netlify/b4d2174e-d444-4758-a6c8-c038d4ca154a)
 ## General info
