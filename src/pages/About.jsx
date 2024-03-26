@@ -42,7 +42,7 @@ const About = () => {
         <title>About {title}</title>
         <meta
           name="description"
-          content="FastMeme about page. You can find here general information about app, contributing and contact."
+          content="Fast-Meme about page. You can find here general information about app, contributing and contact."
         />
         <meta
           name="keywords"
