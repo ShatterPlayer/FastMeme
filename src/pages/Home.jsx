@@ -13,6 +13,8 @@ import MemeWrapper from '../wrappers/MemeWrapper';
 import TextFieldsWrapper from '../wrappers/TextFieldsWrapper';
 import NumberPickersWrapper from '../wrappers/NumberPickersWrapper';
 
+import { title } from '../siteInfo';
+
 const Home = () => {
   ReactGA.pageview('/');
 
@@ -42,7 +44,7 @@ const Home = () => {
         return (
           <>
             <Helmet>
-              <title>FastMeme - Real-Time Memes Generator</title>
+              <title>{title}</title>
               <meta
                 name="description"
                 content="FastMeme is a small and fast memes creator, that you can use to create classic meme with your picture and text."

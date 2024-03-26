@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
+import { title } from '../siteInfo';
 
 const Wrapper = styled.div`
   width: 70%;
@@ -38,7 +39,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About FastMeme - Real-Time Memes Generator</title>
+        <title>About {title}</title>
         <meta
           name="description"
           content="FastMeme about page. You can find here general information about app, contributing and contact."
