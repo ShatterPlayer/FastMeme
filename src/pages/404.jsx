@@ -17,7 +17,7 @@ const NoMatch = () => {
   return (
     <>
       <Helmet>
-        <title>Page Not Found | FastMeme - Real-Time Memes Creator</title>
+        <title>Page Not Found | FastMeme - Real-Time Memes Generator</title>
       </Helmet>
       <div>
         <MainText>404</MainText>

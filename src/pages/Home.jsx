@@ -42,7 +42,7 @@ const Home = () => {
         return (
           <>
             <Helmet>
-              <title>FastMeme - Real-Time Memes Creator</title>
+              <title>FastMeme - Real-Time Memes Generator</title>
               <meta
                 name="description"
                 content="FastMeme is a small and fast memes creator, that you can use to create classic meme with your picture and text."

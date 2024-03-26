@@ -38,7 +38,7 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About FastMeme - Real-Time Memes Creator</title>
+        <title>About FastMeme - Real-Time Memes Generator</title>
         <meta
           name="description"
           content="FastMeme about page. You can find here general information about app, contributing and contact."
@@ -54,7 +54,7 @@ const About = () => {
           FastMeme is a small and fast open-source web application, that can be
           used to create simple, classic memes. The whole source code of this
           app is available on GitHub. You do not need internet connection - just
-          visit FastMeme.ml even if you are offline.
+          visit FastMeme.netlify.app even if you are offline.
         </p>
         <h2>Contributing</h2>
         <p>
