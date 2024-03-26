@@ -42,7 +42,7 @@ const About = () => {
         <title>About {title}</title>
         <meta
           name="description"
-          content="Fast-Meme about page. You can find here general information about app, contributing and contact."
+          content="FastMeme about page. You can find here general information about app, contributing and contact."
         />
         <meta
           name="keywords"
@@ -55,7 +55,7 @@ const About = () => {
           FastMeme is a small and fast open-source web application, that can be
           used to create simple, classic memes. The whole source code of this
           app is available on GitHub. You do not need internet connection - just
-          visit FastMeme.netlify.app even if you are offline.
+          visit Fast-Meme.netlify.app even if you are offline.
         </p>
         <h2>Contributing</h2>
         <p>
